@@ -8,8 +8,8 @@ const userHelp = (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "olayiwolasalaudeen@gmail.com",
-        pass: "eqjakpewiwzgasan",
+        user: process.env.MAIL,
+        pass: process.env.PASS,
       },
     });
     let mailOptions = {
